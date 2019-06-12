@@ -30,13 +30,13 @@ public typealias AFResult<T> = Result<T, Error>
 
 extension AFResult {
     /// Returns the associated value if the result is a success, `nil` otherwise.
-    var value: Success? {
+    public var value: Success? {
         guard case .success(let value) = self else { return nil }
         return value
     }
 
     /// Returns the associated error value if the result is a failure, `nil` otherwise.
-    var error: Failure? {
+    public var error: Failure? {
         guard case .failure(let error) = self else { return nil }
         return error
     }
